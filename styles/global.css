@@ -37,9 +37,10 @@ html {
 }
 
 body {
-  height: 100vh; /*100vh = 100% of the height*/
-  width: 100vw; /*100vw = 100% of the width*/
+  height: 100vh; /*100vh = 100% of the height / 100vw = 100% of the width*/
   background: var(--background);
+
+  display: flex;
 }
 
 body, button, input, textarea {
