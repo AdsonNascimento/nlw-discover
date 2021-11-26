@@ -110,6 +110,10 @@
   align-items: center;
 }
 
+.question-wrapper .question-content p {
+  margin-left: 1.6rem;
+}
+
 .question-wrapper .actions {
   display: flex;
   align-items: center;
@@ -119,4 +123,12 @@
 .question-wrapper .actions > a {
   display: flex;
   align-items: center;
+}
+
+.question-wrapper .actions > a + a {
+  margin-left: 2.4rem;
+}
+
+.question-wrapper .actions > a img {
+  margin-right: 0.8rem;
 }
