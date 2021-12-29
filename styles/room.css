@@ -110,6 +110,12 @@
   align-items: center;
 }
 
+.question-wrapper .question-content .user {
+  padding: 1.4rem;
+  background-color: var(--blue);
+  clip-path: circle();
+}
+
 .question-wrapper .question-content p {
   margin-left: 1.6rem;
 }
@@ -131,4 +137,13 @@
 
 .question-wrapper .actions > a img {
   margin-right: 0.8rem;
+}
+
+/*==== question read ====*/
+.question-wrapper.read {
+  background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user {
+  background-color: var(--grey-blue);
 }
