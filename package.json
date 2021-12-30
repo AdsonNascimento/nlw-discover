@@ -1,0 +1,24 @@
+{
+  "name": "nlw-discover",
+  "version": "1.0.0",
+  "description": "Projeto Rocketseat discover: perguntas anonimas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdsonNascimento/nlw-discover.git"
+  },
+  "keywords": [],
+  "author": "Adson Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdsonNascimento/nlw-discover/issues"
+  },
+  "homepage": "https://github.com/AdsonNascimento/nlw-discover#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
