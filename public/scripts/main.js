@@ -6,27 +6,31 @@ const modalTitle = document.querySelector('.modal h2')
 const modalDescription = document.querySelector('.modal p')
 const modalButton = document.querySelector('.modal button')
 
-//pegar todos os bontões da class check
-const checkButtons = document.querySelectorAll(".actions a.check")
+/*==== pegar todos os bontões da class check ====*/
+  const checkButtons = document.querySelectorAll(".actions a.check")
 
-checkButtons.forEach(button => {
-  //registrar o evento de click
-  button.addEventListener("click", handleClick)
-})
+  checkButtons.forEach(button => {
+    //registrar o evento de click
+    button.addEventListener("click", handleClick)
+  })
 
-//pegar todos os bontões da class delete
-const deleteButtons = document.querySelectorAll(".actions a.delete")
+/*==== pegar todos os bontões da class delete ====*/
+  const deleteButtons = document.querySelectorAll(".actions a.delete")
 
-deleteButtons.forEach(button => {
-  //registrar o evento de click
-  button.addEventListener("click", (event) => handleClick(event, false))
-})
+  deleteButtons.forEach(button => {
+    //registrar o evento de click
+    button.addEventListener("click", (event) => handleClick(event, false))
+  })
 
 function handleClick(event, check = true) {
+  event.preventDefault()
   //conteudo da modal
-  modalTitle.innerHTML = check ? "Marcar como lida" : "Excluir pergunta"
-  modalDescription.innerHTML = check ? "Tem certeza que você deseja marcar como lida?" : "Tem certeza que você deseja excluir esta pergunta?"
-  modalButton.innerHTML = check ? "Sim, marcar como lida" : "Sim, excluir"
+  const text = check ? "Marcar como lida" : "Excluir"
+
+  modalTitle.innerHTML = `${text} esta pergunta`
+  modalDescription.innerHTML = `Tem certeza que você deseja ${text.toLowerCase()} esta pergunta`
+  modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
+  check? modalButton.classList.remove("red") : modalButton.classList.add("red")
 
   //abrir modal
   modal.open()
