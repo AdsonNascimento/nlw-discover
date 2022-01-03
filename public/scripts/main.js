@@ -24,9 +24,17 @@ const modalButton = document.querySelector('.modal button')
 
 function handleClick(event, check = true) {
   event.preventDefault()
+  //pegar info da sala
+  const roomId = document.querySelector("#room-id").dataset.id
+  const slug = check ? "check" : "delete"
+  const questionId = event.target.dataset.id
+
+  //envio de formulario
+  const form = document.querySelector(".modal form")
+  form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+
   //conteudo da modal
   const text = check ? "Marcar como lida" : "Excluir"
-
   modalTitle.innerHTML = `${text} esta pergunta`
   modalDescription.innerHTML = `Tem certeza que você deseja ${text.toLowerCase()} esta pergunta`
   modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
