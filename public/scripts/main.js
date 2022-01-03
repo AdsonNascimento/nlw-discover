@@ -11,29 +11,23 @@ const checkButtons = document.querySelectorAll(".actions a.check")
 
 checkButtons.forEach(button => {
   //registrar o evento de click
-  button.addEventListener("click", event => {
-    modalTitle.innerHTML = "Marcar como lida"
-    modalDescription.innerHTML = "Tem certeza que você deseja marcar como lida?"
-    modalButton.innerHTML = "Sim, marcar como lida"
-    
-    //abrir funcion modal
-    modal.open()
-  })
+  button.addEventListener("click", handleClick)
 })
 
-//pegar todos os bontões da class edelete
+//pegar todos os bontões da class delete
 const deleteButtons = document.querySelectorAll(".actions a.delete")
 
 deleteButtons.forEach(button => {
   //registrar o evento de click
-  button.addEventListener("click", event => {
-    modalTitle.innerHTML = "Excluir pergunta"
-    modalDescription.innerHTML = "Tem certeza que você deseja excluir esta pergunta?"
-    modalButton.innerHTML = "Sim, excluir"
-
-    //abrir funcion modal
-    modal.open()
-  })
+  button.addEventListener("click", (event) => handleClick(event, false))
 })
 
-//pegar quando marcar como lido for clicado
+function handleClick(event, check = true) {
+  //conteudo da modal
+  modalTitle.innerHTML = check ? "Marcar como lida" : "Excluir pergunta"
+  modalDescription.innerHTML = check ? "Tem certeza que você deseja marcar como lida?" : "Tem certeza que você deseja excluir esta pergunta?"
+  modalButton.innerHTML = check ? "Sim, marcar como lida" : "Sim, excluir"
+
+  //abrir modal
+  modal.open()
+}
