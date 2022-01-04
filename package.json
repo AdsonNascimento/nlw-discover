@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Projeto Rocketseat discover: perguntas anonimas",
   "main": "src/server.js",
-  "scripts": { 
-    "start": "nodemon ."
+  "scripts": {
+    "start": "nodemon .",
+    "init-db": "node src/db/init.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,10 @@
   "homepage": "https://github.com/AdsonNascimento/nlw-discover#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2",
+    "tar": "^6.1.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
