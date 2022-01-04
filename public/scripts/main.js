@@ -31,7 +31,7 @@ function handleClick(event, check = true) {
 
   //envio de formulario
   const form = document.querySelector(".modal form")
-  form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+  form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`)
 
   //conteudo da modal
   const text = check ? "Marcar como lida" : "Excluir"
