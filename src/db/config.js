@@ -1,8 +1,8 @@
-const sqlite3 = require("sqlite3")
-const { open } = require("sqlite")
+import { Database } from "sqlite3";
+import { open } from "sqlite";
 
-module.exports = () => 
+export default () => 
   open({
     filename:'./src/db/rocketq.sqlite',
-    driver: sqlite3.Database,
+    driver: Database,
   });
