@@ -1,4 +1,4 @@
-const Database = require("./config")
+import Database from './config'
 
 const initDb = {
   async init() {
@@ -7,7 +7,7 @@ const initDb = {
     await db.exec(`CREATE TABLE rooms (
       id INTEGER PRIMARY KEY,
       pass TEXT
-    )`);
+    )`)
 
     await db.exec(`CREATE TABLE questions (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,4 +20,5 @@ const initDb = {
   }
 }
 
-initDb.init();
+initDb.init()
+
