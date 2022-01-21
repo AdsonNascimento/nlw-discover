@@ -6,3 +6,5 @@ export default () =>
     filename:'./src/db/rocketq.sqlite',
     driver: Database,
   });
+
+  
